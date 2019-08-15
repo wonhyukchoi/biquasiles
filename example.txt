@@ -1,0 +1,54 @@
+apophys@Envy-HP:~/Dropbox/whc-sn$ python
+Python 2.7.12 (default, Jul  1 2016, 15:12:24) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from biquasiles import *
+>>> 
+>>> X=bqslist([[[0,0,0],[0,0,0],[0,0,0]],[[0,0,0],[0,0,0],[0,0,0]]])
+>>> len(X)
+72
+>>> Y=breducelist(X)
+>>> len(Y)
+19
+>>> phi=bwlist(Y[3],5)
+>>> len(phi)
+125
+>>> bwdisplay(phi[42])
+[[1, 1, 1, 2], [3, 1, 1, 3], [3, 1, 2, 1], [2, 1, 2, 2], [1, 1, 3, 1], [2, 1, 3, 3], [2, 2, 1, 3], [3, 2, 2, 2], [4, 2, 3, 1], [4, 3, 1, 2], [2, 3, 2, 1], [3, 3, 3, 3]]
+>>> bqsbwinv(gknot[(3,1)],Y[3],phi[42],5)
+9
+>>> bqsbwinv([[-1.5,2.5,-3.5,1.5,-2.5,3.5]],Y[3],phi[42],5)
+9
+>>> bqsbwinv(gknot[(6,1)],Y[3],phi[42],5)
+9
+>>> bqsbwinv(gknot[(6,2)],Y[3],phi[42],5)
+9
+>>> bqsbwinv(gknot[(6,3)],Y[3],phi[42],5)
+9
+>>> bqsbwinv(gknot[(6,4)],Y[3],phi[42],5)
+9
+>>> bqsbwinv(gknot[(6,5)],Y[3],phi[42],5)
+9
+
+>>> phi = bwlist(Y[9],7)
+
+>>> bwlinklist(Y[9],phi[42],7)
+
+[[(2, 0, 1), 27], [(4, 0, 1), 27], [(5, 0, 1), 27], [(6, 0, 1), 27], [(6, 0, 2), 27], [(6, 0, 3), 27], [(6, 0, 4), 9], [(6, 0, 5), 81], [(6, 1, 1), 81],
+ [(7, 0, 1), 27], [(7, 0, 2), 27], [(7, 0, 3), 27], [(7, 0, 4), 27], [(7, 0, 5), 27], [(7, 0, 6), 27], [(7, 0, 7), 81], 
+[(7, 1, 1), 27], [(7, 1, 2), 2*u**5 + 2*u**4 + 2*u**3 + 2*u**2 + 19]]
+
+
+>>> bwknotrefrev(Y[9],phi[42],7,(9,32))
+[['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]
+
+
+>>> phi=bwlist(Y[4],5)
+>>> bwknotlistrefrev(Y[4],phi[14],5)
+[[0, [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(3, 1), [['reg', 27], ['mirror', 27], ['reverse', 27], ['both', 27]]], [(4, 1), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(5, 1), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(5, 2), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(6, 1), [['reg', 4*u**4 + 4*u + 19], ['mirror', 4*u**4 + 4*u + 19], ['reverse', 4*u**4 + 4*u + 19], ['both', 4*u**4 + 4*u + 19]]], [(6, 2), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(6, 3), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(7, 1), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(7, 2), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(7, 3), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(7, 4), [['reg', 27], ['mirror', 27], ['reverse', 27], ['both', 27]]], [(7, 5), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(7, 6), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(7, 7), [['reg', 4*u**4 + 4*u + 19], ['mirror', 4*u**4 + 4*u + 19], ['reverse', 4*u**4 + 4*u + 19], ['both', 4*u**4 + 4*u + 19]]], [(8, 1), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 2), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 3), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 4), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 5), [['reg', 27], ['mirror', 27], ['reverse', 27], ['both', 27]]], [(8, 6), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 7), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 8), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 9), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 10), [['reg', 27], ['mirror', 27], ['reverse', 27], ['both', 27]]], [(8, 11), [['reg', 4*u**4 + 4*u + 19], ['mirror', 4*u**4 + 4*u + 19], ['reverse', 4*u**4 + 4*u + 19], ['both', 4*u**4 + 4*u + 19]]], [(8, 12), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 13), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 14), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 15), [['reg', 27], ['mirror', 27], ['reverse', 27], ['both', 27]]], [(8, 16), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 17), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]], [(8, 18), [['reg', 16*u**4 + 16*u + 49], ['mirror', 16*u**4 + 16*u + 49], ['reverse', 16*u**4 + 16*u + 49], ['both', 16*u**4 + 16*u + 49]]], [(8, 19), [['reg', 27], ['mirror', 27], ['reverse', 27], ['both', 27]]], [(8, 20), [['reg', 4*u**4 + 2*u**3 + 2*u**2 + 4*u + 15], ['mirror', 4*u**4 + 2*u**3 + 2*u**2 + 4*u + 15], ['reverse', 4*u**4 + 2*u**3 + 2*u**2 + 4*u + 15], ['both', 4*u**4 + 2*u**3 + 2*u**2 + 4*u + 15]]], [(8, 21), [['reg', 27], ['mirror', 27], ['reverse', 27], ['both', 27]]], [(9, 32), [['reg', 9], ['mirror', 9], ['reverse', 9], ['both', 9]]]]
+
+
+>>> bwknotloop(Y[3],phi[14],5)
+0
+
+Y = breducelist(bqslist([[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]]))
